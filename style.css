@@ -11,7 +11,6 @@
   --activity-oragen: #E95E10;
   --activity-pink: #E5245E;
   --activity-purple: #591B98;
-
 }
 
 * {
@@ -21,19 +20,18 @@
 }
 
 body {
-  padding: 88px 80px 137px;
-  width: 100%;    
-  background-color: var(--background);  
+  padding: 88px 80px 48px;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--background);
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   font-style: normal;
   overflow-x: hidden;
-  width: 100%;
-  min-height: 100vh;
 }
 
-main {  
-  max-width: 1200px;  
+.container {
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -77,11 +75,6 @@ p,
   font-style: italic;
 }
 
-.container {
-  margin: auto;
-
-}
-
 .divisor {
   width: 100%;
   height: 1px;
@@ -90,7 +83,7 @@ p,
 }
 
 #title-page {
-  margin-bottom: 40px;
+  margin-bottom: 2rem;
 }
 
 #title-page h1 {
@@ -100,5 +93,104 @@ p,
 #title-image img {
   width: 100%;
   border-radius: 28px;
+  margin-bottom: 24px;
+}
 
+#title-image p {
+  text-align: center;
+  font-style: italic;
+}
+
+#content-trip-title {
+  margin-bottom: 4rem;
+}
+
+#content-trip-title .headline {
+  margin-bottom: 2px;
+}
+
+#content-trip-title .headline {
+  margin-bottom: 2px;
+}
+
+#content-trip-title h2 {
+  margin-bottom: 8px;
+}
+
+#content-trip-title p {
+  text-align: justify;
+}
+
+.card-trip img {
+  width: 100%;
+  border-radius: 28px;
+  margin-bottom: 2.5rem;
+}
+
+#content-trip-list ol {
+  list-style: none;
+}
+
+#content-trip-list ol {
+  counter-reset: card-count;
+}
+
+#content-trip-list ol li {
+  counter-increment: card-count;
+}
+
+#content-trip-list ol li h3::before {
+  content: counter(card-count) ". ";
+}
+
+.card-trip p {
+  margin-bottom: 1rem;
+}
+
+.card-trip img {
+  margin-top: 48px;
+}
+
+#content-trip-list ol li:first-child img {
+  margin-top: 0;
+}
+
+.trip-activity-list li {
+  margin-left: 24px;
+  list-style: disc;
+  font-weight: bold;
+}
+
+.card-trip span {
+  font-weight: bold;
+}
+
+#content-trip-list ul li:nth-child(1) {
+  color: var(--activity-blue);
+}
+
+#content-trip-list ul li:nth-child(2) {
+  color: var(--activity-pink);
+}
+
+#content-trip-list ul li:nth-child(3) {
+  color: var(--activity-oragen);
+}
+
+footer {
+  width: 100%;
+}
+
+footer p {
+  text-align: center;
+  margin-bottom: 37px;
+}
+
+.credits {
+  display: flex;
+  justify-content: center;
+}
+
+.credits img {
+  margin-inline: 4px;
 }
